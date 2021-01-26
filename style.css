@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  background-color: rgb(245, 245, 245);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a:hover {
+  color: rgb(206, 206, 247);
+}
+
+nav {
+  background-color: rgb(71, 71, 182);
+  padding: 20px;
+}
+
+main {
+  text-align: center;
+  padding-top: 100px;
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(34, 34, 34);
+  color: white;
+  padding: 35px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 3px;
+  height: 26px;
+}
+
+button {
+  border-radius: 3px;
+  border: 1px solid rgb(128, 83, 0);
+  background-color: rgb(255, 166, 0);
+  color: white;
+  font-size: 15px;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-family: monospace, sans-serif;
+}
+
+.resultArea {
+  border-radius: 3px;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 25px 0px;
+  padding-left: 40px;
+  width: 368px;
+  background-color: white;
+  border: 1px solid rgb(201, 201, 201);
+}
+
+.kpk, .fpb {
+  margin: 15px;
+  color: rgb(54, 54, 54);
+  height: 30px;
+  font-family: monospace, sans-serif;
+}
+
+.menu {
+  padding: 16px 0px;
+  font-size: 25px;
+  text-align: center;
+  display: none;
+  width: 100%;
+  background-color: rgb(71, 71, 182);
+  color: white;
+}
+
+.navDisplayed {
+  height: 0px;
+  overflow: hidden;
+  padding: 10px;
+  display: none;
+  border: 1px solid rgb(212, 214, 226);
+  background-color: white;
+} .navDisplayed a {
+  color: rgb(6, 6, 97);
+  display: block;
+} .navDisplayed a:active {
+  color: rgb(206, 206, 247);
+}
+
+@media only screen and (max-width: 440px) {
+  .resultArea {
+    width: calc(100% - 80px);
+  }
+
+  #angka1, #angka2 {
+    width: calc(50% - 22px);
+    border-radius: 2px;
+  } 
+
+  button {
+    width: calc(100% - 40px);
+    border-radius: 2px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  .menu {
+    display: block;
+    padding: 12px 0px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    padding-top: 72px;
+  }
+}
+
+.kontak {
+  margin: 10px;
+}
+
+#kontakArea {
+  padding: 18px;
+  word-wrap: break-word;
+}
+
+.email {
+  text-align: center;
+}
