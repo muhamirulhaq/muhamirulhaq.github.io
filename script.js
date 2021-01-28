@@ -1,79 +1,91 @@
-function cariKPK(a, b) {
-  let kpk = 0;
-  for(let i = 1; true; i++) {
-    if(a * i % b === 0) {
-      kpk = a * i;
-      break;
-    }
-  }
-  return kpk;
+var nama = prompt("Siapa namamu?")
+var yaTidak = prompt("Apakah kamu suka dengan kota Makassar?");
+
+var users = {
+            name: nama,
+            yesNo: yaTidak,
+};
+
+if(users.yesNo === "ya") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+} else if(users.yesNo === "Ya") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+} else if(users.yesNo === "YA") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+
+
+} else if(users.yesNo === "iya") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+} else if(users.yesNo === "Iya") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+} else if(users.yesNo === "IYA") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+
+
+} else if(users.yesNo === "suka") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+} else if(users.yesNo === "Suka") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+} else if(users.yesNo === "SUKA") {
+       alert("Selamat datang " + users.name + "! ini adalah website yang tepat untukmu, Selamat Menikmati!");
+
+
+} else if(users.yesNo === "tidak") {
+       alert("Sayang sekali " + users.name + ", kami sangat menyarankan anda untuk mengenal kota Makassar lebih jauh :)");
+} else if(users.yesNo === "Tidak") {
+       alert("Sayang sekali " + users.name + ", kami sangat menyarankan anda untuk mengenal kota Makassar lebih jauh :)");
+} else if(users.yesNo === "TIDAK") {
+       alert("Sayang sekali " + users.name + ", kami sangat menyarankan anda untuk mengenal kota Makassar lebih jauh :)");
+
+
+} else {
+       alert("Maaf, jawaban anda tidak dikenali");
 }
 
-function cariFPB(a, b) {
-  let fpb = 0;
-  for(let i = 1; true; i++) {
-    if(b % (a / i) === 0) {
-      fpb = a / i;
-      break;
-    }
-  }
-  return fpb;
+function gambarBesar() {
+document.getElementById("fotoku").style.height = "185px";
+document.getElementById("fotoku").style.width = "185px";
+document.getElementById("fotoku").style.borderColor = "white";
+document.getElementById("fotoku").style.boxShadow = "0px 1px 10px #000000";
+document.getElementById("tulisanMengecil").style.fontSize = "6.3px";
 }
 
-function result() {
-  let a = document.querySelector("#angka1").value; 
-  let b = document.querySelector("#angka2").value;
-  document.querySelector("#angka1").value = "";
-  document.querySelector("#angka2").value = "";
-  if(isNaN(a) || isNaN(b) || a === "" || b === "") {
-    document.querySelector(".kpk").innerHTML = "Bukan angka!";
-    document.querySelector(".fpb").innerHTML = "Inputan harus berupa angka.";
-    return;
-  }
-  document.querySelector(".kpk").innerHTML = "<b>KPK :</b> " + cariKPK(a, b);
-  document.querySelector(".fpb").innerHTML = "<b>FPB :</b> " + cariFPB(a, b);
-}
-try {
-  document.querySelector("button").onclick = result;
-} catch(e) {
-  console.log("Error");
+function gambarKecil() {
+document.getElementById("fotoku").style.height = "162px";
+document.getElementById("fotoku").style.width = "162px";
+document.getElementById("fotoku").style.borderColor = "black";
+document.getElementById("fotoku").style.boxShadow = "none";
+document.getElementById("tulisanMengecil").style.fontSize = "13px";
 }
 
-
-// MENU DISPLAY
-let isDisplay = false;
-
-function menuDisplay() {
-  isDisplay = true;
-  const navDisplayed = document.querySelector(".navDisplayed");
-  navDisplayed.style.display = "block";
-  let i = 0;
-  document.querySelector(".menu").innerHTML = "&times;";
-  const x = setInterval(function() {
-    navDisplayed.style.height = i + "px";
-    if(i == 120) clearInterval(x);
-    i+=2;
-  },1);
+function modeGelap() {
+document.getElementById("tubuhGelap").style.backgroundColor = "black";
+document.getElementById("tubuhGelap").style.color = "white";
+document.getElementById("borderGlow").style.borderColor = "white";
+document.getElementById("content").style.borderColor = "white";
+document.getElementById("makassar").style.borderColor = "white";
 }
 
-function menuNone() {
-  isDisplay = false;
-  const navDisplayed = document.querySelector(".navDisplayed");
-  let i = 120;
-  document.querySelector(".menu").innerHTML = "&equiv;";
-  const x = setInterval(function() {
-    navDisplayed.style.height = i + "px";
-    if(i == 0) {
-      navDisplayed.style.display = "none";
-      clearInterval(x);
-    }
-    i-=2;
-  },1);
+function modeTerang() {
+document.getElementById("tubuhGelap").style.backgroundColor = "white";
+document.getElementById("tubuhGelap").style.color = "black";
+document.getElementById("borderGlow").style.borderColor = "black";
+document.getElementById("content").style.borderColor = "black";
+document.getElementById("makassar").style.borderColor = "black";
 }
 
-document.querySelector(".menu").addEventListener("click", isDisplaying);
+function borderWhiteFb() {
+document.getElementById("fb").style.borderColor = "white";
+}
 
-function isDisplaying() {
-  if(isDisplay) menuNone();
-  else menuDisplay();
+function borderWhiteIg() {
+document.getElementById("ig").style.borderColor = "white";
+}
+
+function borderBlackFb() {
+document.getElementById("fb").style.borderColor = "black";
+}
+
+function borderBlackIg() {
+document.getElementById("ig").style.borderColor = "black";
 }
